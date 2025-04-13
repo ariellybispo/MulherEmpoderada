@@ -1,81 +1,209 @@
+#login-container button:hover {
+    background-color: #fcfeff;
+}
+
+/* Estilo para o botão de login */
+#login-btn {
+    background-color: #83e1f1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+#login-btn:hover {
+    background-color: #fcfeff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    * { 
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Itim', cursive;
-        background-color: #ace4f7;
-        text-align: center;
-    }
-    
-    nav {
-        background-color: #83e1f1;
-        padding: 17px 0;
-    }
-    
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    nav ul li {
-        display: inline-block;
-        position: relative;
-        margin: 0 15px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #f7f9fa;
-        font-size: 20px;
-        padding: 10px 18px;
-        background: #83e1f1;
-        border-radius: 15px;
-        transition: background-color 0.3s ease; 
-    }
-    
-    nav ul li a:hover {
-        background-color: #fcfeff;
-    }
-    
-    nav ul li ul {
-        list-style: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #83e1f1;
-        padding: 15px 0;
-        display: none;
-        border-radius: 20px;
-        box-shadow: 0px 4px 6px #fcfeff;
-    }
-    
-    nav ul li:hover ul {
-        display: block;
-    }
-    
-    nav ul li ul li {
-        width: 180px;
-        
-        text-align: left;
-        margin: 10px 0;
-    }
-    
-    nav ul li ul li a {
-        padding: 10px 20px;
-        background: #83e1f1;
-        border-radius: 10px;
-        color: #f9fcfd;
-        font-size: 18px;
-    }
-    
-    nav ul li ul li a:hover {
-        background-color: #fcfeff;
-    }
 }
+
+body {
+    font-family: 'Itim', cursive;
+    background-color: #ace4f7;
+    text-align: center;
+}
+
+nav {
+    background-color: #83e1f1;
+    padding: 17px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f7f9fa;
+    font-size: 20px;
+    padding: 10px 18px;
+    background: #83e1f1;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fcfeff;
+}
+
+nav ul li ul {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #83e1f1;
+    padding: 15px 0;
+    display: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px #fcfeff;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 180px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    background: #83e1f1;
+    border-radius: 10px;
+    color: #f9fcfd;
+    font-size: 18px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #fcfeff;
+}
+
+/* Estilos para o formulário de login */
+#login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    z-index: 2000;
+    position: fixed;
+    
+}
+
+#login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login-container button {
+    background-color: #83e1f1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#topo-direita {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ace4f7;
+    gap: 10px;
+}
+
+#barra-pesquisa {
+        width: 60%; /* você pode ajustar: 40%, 50%... */
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        outline: none;
+}
+
+#barra-pesquisa:focus {
+    border-color: #83e1f1;
+}
+#topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* garante que fique na frente de tudo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ace4f7;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ace4f7;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+nav {
+    margin-top: 70px; /* altura aproximada da barra fixa */
+}
+.search-wrapper {
+    position: relative;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* altura maior e espaço pro emoji */
+    border-radius: 30px;          /* deixa bem arredondada */
+    border: 2px solid #83e1f1;    /* contorno azul claro */
+    font-size: 16px;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-wrapper input:focus {
+    border-color: #51bada; /* muda a cor no foco */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+}
+
+
+

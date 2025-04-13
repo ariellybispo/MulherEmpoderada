@@ -1,3 +1,13 @@
+document.getElementById('login-btn').addEventListener('click', function() {
+    document.getElementById('login-container').style.display = 'block';
+});
+
+// Fechar o formulário de login
+document.getElementById('close-login').addEventListener('click', function() {
+    document.getElementById('login-container').style.display = 'none';
+});
+
+// Manter o comportamento do menu suspenso no restante do código
 document.getElementById('moda').addEventListener('click', function(event) {
     event.preventDefault();
     const submenu = document.getElementById('sub-opcoes');

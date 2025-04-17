@@ -235,3 +235,99 @@ img {
     height: 300px;
     border-radius: 50px; 
 }
+
+/*Api de Maquiagens*/
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 220px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+/*ARTIGOOOS*/
+
+#artigos {
+    padding: 60px 5%;
+    background-color: #83e1f1;
+    ;
+  }
+  
+  .artigos-header {
+    margin-bottom: 40px;
+  }
+  
+  .artigos-header h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    text-align: left;
+    color:rgb(14, 104, 110);
+  }
+  
+  .artigos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Efeito de sombra para dar destaque */
+
+  }
+  
+  .card-artigo {
+    background-color: #a1d7ec;
+    border-radius: 20px;
+    padding: 25px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-artigo img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .card-artigo .categoria {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #e91e63;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .card-artigo h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .card-artigo a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .card-artigo .tempo-leitura {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 10px;
+  }
+  

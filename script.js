@@ -1,3 +1,5 @@
+
+
 function verificarLogin() {
     const email = document.getElementById("txtEmail").value;
     const senha = document.getElementById("txtSenha").value;
@@ -75,28 +77,13 @@ if (opcoes.length) {
         });
     });
 
-// Função para buscar imagens de maquiagem no Unsplash
-function buscarImagensMaquiagem() {
-    const apiKey = "SUA_API_KEY_DO_UNSPLASH"; // Obtenha sua chave da API no Unsplash
-    const url = `https://api.unsplash.com/search/photos?query=makeup&client_id=${apiKey}`;
-    
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            const imagensContainer = document.getElementById('imagens');
-            imagensContainer.innerHTML = '';
-            data.results.forEach(imagem => {
-                const imagemDiv = document.createElement('div');
-                imagemDiv.innerHTML = `
-                    <img src="${imagem.urls.small}" alt="Imagem de maquiagem" />
-                    <p><strong>Foto por:</strong> ${imagem.user.name}</p>
-                `;
-                imagensContainer.appendChild(imagemDiv);
+    const opcoes = document.querySelectorAll('.opcao');
+    if (opcoes.length) {
+        opcoes.forEach(opcao => {
+            opcao.addEventListener('click', function (event) {
+                event.preventDefault(); // <-- Isso aqui impede redirecionamento de <a href="...">
+                // ... resto do código
             });
-        })
-        .catch(error => {
-            console.error("Erro ao buscar imagens:", error);
         });
-}
-
+    }
 }

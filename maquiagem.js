@@ -26,6 +26,4 @@ function buscarMaquiagens() {
             console.error('Erro ao buscar maquiagens:', error);
         });
 }
-
-// Quando carregar a página, buscar maquiagens
 document.addEventListener('DOMContentLoaded', buscarMaquiagens);

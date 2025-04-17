@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do HotDog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Tela para realizar login</h2>
+    <form>
+        <label for="txtEmail">E-mail:</label>
+        <input type="email" id="txtEmail" name="txtEmail" required placeholder="Digite seu e-mail">
+
+        <label for="txtSenha">Senha:</label>
+        <input type="password" id="txtSenha" name="txtSenha" required placeholder="Digite sua senha">
+
+        <button type="button" onclick="verificarLogin()">Entrar</button>
+        
+        <p id="mensagemErro"></p>
+    </form>
+
+    <p><a href="cadastro.html">Não tem conta? Cadastre-se</a></p>
+    <p><a href="recuperarSenha.html">Esqueci minha senha</a></p>
+</body>
+</html>

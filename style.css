@@ -2,7 +2,6 @@
     background-color: #fcfeff;
 }
 
-/* Estilo para o botão de login */
 #login-btn {
     background-color: #83e1f1;
     border: none;
@@ -93,7 +92,6 @@ nav ul li ul li a:hover {
     background-color: #fcfeff;
 }
 
-/* Estilos para o formulário de login */
 #login-container {
     position: absolute;
     top: 50%;
@@ -137,7 +135,6 @@ nav ul li ul li a:hover {
 }
 
 #barra-pesquisa {
-        width: 60%; /* você pode ajustar: 40%, 50%... */
         padding: 10px 15px;
         border-radius: 20px;
         border: 1px solid #ccc;
@@ -153,7 +150,7 @@ nav ul li ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* garante que fique na frente de tudo */
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,7 +170,7 @@ nav ul li ul li a:hover {
     z-index: 1000;
 }
 nav {
-    margin-top: 70px; /* altura aproximada da barra fixa */
+    margin-top: 70px; 
 }
 .search-wrapper {
     position: relative;
@@ -183,9 +180,9 @@ nav {
 
 .search-wrapper input {
     width: 100%;
-    padding: 12px 15px 12px 40px; /* altura maior e espaço pro emoji */
-    border-radius: 30px;          /* deixa bem arredondada */
-    border: 2px solid #83e1f1;    /* contorno azul claro */
+    padding: 12px 15px 12px 40px;
+    border-radius: 30px;         
+    border: 2px solid #83e1f1;    
     font-size: 16px;
     background-color: #ffffff;
     outline: none;
@@ -193,7 +190,7 @@ nav {
 }
 
 .search-wrapper input:focus {
-    border-color: #51bada; /* muda a cor no foco */
+    border-color: #51bada; 
 }
 
 .search-icon {
@@ -204,6 +201,37 @@ nav {
     font-size: 18px;
     pointer-events: none;
 }
+.destaque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #83e1f1;
+    padding: 70px 10%;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .destaque .texto h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  .destaque .texto h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
 
+  body {
+    height: 200vh; 
+    overflow: auto; /* barra de rolagem automaticamente */
 
+}
 
+img {
+    width: 400px;
+    height: 300px;
+    border-radius: 50px; 
+}

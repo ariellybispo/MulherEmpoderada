@@ -18,7 +18,6 @@ if (loginBtn) {
         if (loginContainer) {
             loginContainer.style.display = 'block';
         } else {
-            // Caso você queira redirecionar direto para login.html
             window.location.href = "login.html";
         }
     });
@@ -81,8 +80,7 @@ if (opcoes.length) {
     if (opcoes.length) {
         opcoes.forEach(opcao => {
             opcao.addEventListener('click', function (event) {
-                event.preventDefault(); // <-- Isso aqui impede redirecionamento de <a href="...">
-                // ... resto do código
+                event.preventDefault(); 
             });
         });
     }

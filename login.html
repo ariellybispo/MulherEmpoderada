@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login do HotDog</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
-    <h2>Tela para realizar login</h2>
-    <form>
-        <label for="txtEmail">E-mail:</label>
-        <input type="email" id="txtEmail" name="txtEmail" required placeholder="Digite seu e-mail">
+<body class="login-body">
+  <div class="login-container">
+    <h2>Acesse sua conta</h2>
+    <form onsubmit="verificarLogin(); return false;">
+      <label for="txtEmail">Email:</label>
+      <input type="email" id="txtEmail" name="txtEmail" required>
 
-        <label for="txtSenha">Senha:</label>
-        <input type="password" id="txtSenha" name="txtSenha" required placeholder="Digite sua senha">
+      <label for="txtSenha">Senha:</label>
+      <input type="password" id="txtSenha" name="txtSenha" required>
 
-        <button type="button" onclick="verificarLogin()">Entrar</button>
-        
-        <p id="mensagemErro"></p>
+      <div class="link-container">
+        <a href="recuperarSenha.html">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit">Entrar</button>
+
+      <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
     </form>
-
-    <p><a href="cadastro.html">Não tem conta? Cadastre-se</a></p>
-    <p><a href="recuperarSenha.html">Esqueci minha senha</a></p>
+  </div>
+  <script src="cadastro-login.js"></script>
 </body>
 </html>
+

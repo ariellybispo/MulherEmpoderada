@@ -1,5 +1,5 @@
 function buscarMaquiagens() {
-    const url = "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
+    const url = "https://makeup-api.vercel.app/api/v1/products.json?brand=maybelline";
 
     fetch(url)
         .then(response => response.json())
@@ -24,4 +24,5 @@ function buscarMaquiagens() {
             console.error('Erro ao buscar maquiagens:', error);
         });
 }
+
 document.addEventListener('DOMContentLoaded', buscarMaquiagens);

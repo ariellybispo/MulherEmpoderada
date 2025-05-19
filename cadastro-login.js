@@ -1,4 +1,3 @@
-// Função para verificar o cadastro
 function verificarCadastro(event) {
     event.preventDefault();
   
@@ -28,7 +27,6 @@ function verificarCadastro(event) {
       return;
     }
   
-    // Salva os dados no localStorage
     localStorage.setItem("emailCadastrado", email);
     localStorage.setItem("senhaCadastrada", senha);
   
@@ -36,7 +34,6 @@ function verificarCadastro(event) {
     window.location.href = "login.html";
   }
   
-  // Função para verificar o login
   function verificarLogin() {
     const email = document.getElementById('txtEmail').value;
     const senha = document.getElementById('txtSenha').value;

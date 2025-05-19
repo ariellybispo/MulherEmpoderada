@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Mostra ou oculta o submenu "Moda"
     const moda = document.getElementById("moda");
     const subOpcoes = document.getElementById("sub-opcoes");
 
     moda.addEventListener("click", function (event) {
-        event.preventDefault(); // Impede redirecionamento
+        event.preventDefault(); 
         if (subOpcoes.style.display === "none" || subOpcoes.style.display === "") {
             subOpcoes.style.display = "block";
         } else {
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Apenas impede comportamento padrão ao clicar nas opções
     const opcoes = document.querySelectorAll('.opcao');
     opcoes.forEach(opcao => {
         opcao.addEventListener('click', function (event) {

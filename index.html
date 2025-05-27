@@ -10,16 +10,26 @@
 <body>
     <div id="top-bar">
       <a href="login.html" id="login-btn" class="login-link">Login</a>
-      <div class="search-wrapper">
-            <span class="search-icon">🔍</span>
-            <input type="text" placeholder="Buscar..." />
-        </div>
-       
-       <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            });
-        </script>
-    
+     <div class="search-wrapper">
+  <span class="search-icon">🔍</span>
+  <input type="text" id="search-input" placeholder="Buscar...">
+</div>
+      <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("search-input");
+  const artigos = document.querySelectorAll(".card-artigo");
+
+  input.addEventListener("input", function () {
+    const termo = input.value.toLowerCase();
+
+    artigos.forEach(artigo => {
+      const texto = artigo.innerText.toLowerCase();
+      artigo.style.display = texto.includes(termo) ? "block" : "none";
+    });
+  });
+});
+</script>
+
     </div>
     <div id="login-container" style="display: none;">
         <form id="login-form" action="#" method="post">
@@ -36,7 +46,6 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Contato</a></li>
             <li><a href="podcasts-mulheres.html">Podcast</a></li>
             <li><a href="artigos.html">Artigos</a></li>
             <li><a href="Livros.html">Livros</a></li>
@@ -61,69 +70,55 @@
 
 <section id="artigos">
     <div class="artigos-header">
-      <h2>Artigos</h2>
+      <h2>Diquinhas femininas</h2>
     </div>
     <div class="artigos-container">
      
-      <!-- Artigo 1 -->
-      <div class="card-artigo">
-        <p class="categoria">Ciclo Menstrual</p>
-        <h3>Higiene do sono: Uma ajudinha quando o ciclo dificulta dormir bem</h3>
+ <!-- Artigo 4 -->
+      <a href="  https://www.maristelacorralero.com.br/?https%3A%2F%2Fmaristelacorralero_com_br&gad_source=1&gad_campaignid=21248798367&gclid=Cj0KCQjwotDBBhCQARIsAG5pinMSBAmRNdsM8F3bXPCn_dPJ9lUlHWGXzeY0Isx7xAP2PTND3JaVPY8aAiIKEALw_wcB" target="_blank" rel="noopener noreferrer" class="card-link">
+  <div class="card-artigo">
+        <p class="categoria">BEM-ESTAR</p>
+        <h3>Dicas para fortalecer sua autoestima e Bem-Estar</h3>
         <a href="#">Leia mais</a>
         <p class="tempo-leitura">5 min. de leitura</p>
-        <img src="img/higiene-do-sono-na-menstruacao-2.jpg" alt="Dicas de sono">
-        <div id="artigo-container"></div>
-      </div>
-      
-      <!-- Artigo 2 -->
-      <div class="card-artigo">
-        <p class="categoria">Produtos Intimus</p>
-        <h3>Sabonete íntimo: Qual a melhor rotina de higiene?</h3>
-        <a href="#">Leia mais</a>
-        <p class="tempo-leitura">4 min. de leitura</p>
-        <img src="img/intimus_ilustracao_sabonete-02.jpg" alt="Qual sabonete usar"> 
-      </div>
-   
+        <img src="img/conceito-de-ilustracao-de-auto-cuidado_23-2148526939.avif" alt="Colicas">
+    </div>
+      </a>
+
       <!-- Artigo 3 -->
-      <div class="card-artigo">
+     <a href="  https://iplclinicaescola.com.br/2021/06/16/mulheres-sexo-e-tabu-porque-a-sexualidade-feminina-ainda-e-reprimida/" target="_blank" rel="noopener noreferrer" class="card-link">
+     <div class="card-artigo">
         <p class="categoria">SEXUALIDADE</p>
         <h3>Desejo feminino: Desejo feminino não é tabu — é humano  </h3>
         <a href="#">Leia mais</a>
         <p class="tempo-leitura">8 min. de leitura</p>
         <img src="img/ilustracao-de-educacao-sexual-desenhada-a-mao_23-2150006291.avif" alt="Colicas">
-
       </div>
-  
-      <!-- Artigo 4 -->
-      <div class="card-artigo">
-        <p class="categoria">BEM-ESTAR</p>
-        <h3>Dicas para fortalecer sua autoestima</h3>
-        <a href="#">Leia mais</a>
-        <p class="tempo-leitura">5 min. de leitura</p>
-        <img src="img/conceito-de-ilustracao-de-auto-cuidado_23-2148526939.avif" alt="Colicas">
-
-    </div>
+      </a>
 
       <!-- Artigo 5 -->
-      <div class="card-artigo">
+       <a href="https://www.tuasaude.com/6-dicas-para-diminuir-as-colicas-menstruais/" target="_blank" rel="noopener noreferrer" class="card-link">
+       <div class="card-artigo">
         <p class="categoria">SAÚDE FEMININA</p>
         <h3>Como lidar com as cólicas menstruais no dia a dia</h3>
         <a href="#">Leia mais</a>
         <p class="tempo-leitura">3 min. de leitura</p>
         <img src="img/desenho-animado-de-uma-mulher-com-colicas-menstruais_207579-3121.avif" alt="Colicas">
-
       </div>
+     </a>
 
   <!-- Artigo 6 -->
+  <a href="https://www.tuasaude.com/alimentos-que-combatem-a-tpm-tensao-pre-menstrual/" target="_blank" rel="noopener noreferrer" class="card-link">
   <div class="card-artigo">
     <p class="categoria">ALIMENTAÇÃO</p>
-    <h3>Alimentos que ajudam na TPM</h3>
+    <h3>Dieta para TPM: melhores alimentos e o que evitar </h3>
     <a href="#">Leia mais</a>
     <p class="tempo-leitura">4 min. de leitura</p>
     <img src="img/vontade-de-comer-doce-na-tpm-1.jpg" alt="Alimentos TPM">
   </div>
-  
+
   <!-- Artigo 7 -->
+     <a href="https://www.alwaysbrasil.com.br/pt-br/para-mulheres/saude/exercicios-para-a-menstruacao" target="_blank" rel="noopener noreferrer" class="card-link">
   <div class="card-artigo">
     <p class="categoria">EXERCÍCIOS</p>
     <h3>Exercícios leves para o período menstrual</h3>
@@ -131,27 +126,46 @@
     <p class="tempo-leitura">3 min. de leitura</p>
     <img src="img/como-aliviar-o-inchaco-menstrual-3.jpg" alt="Exercícios durante ciclo">
   </div>
+      </a>
 
   <!--Artigo 8 -->
+    <a href="https://istoe.com.br/consciencia-corporal-como-ter-uma-conexao-mais-profunda-com-seu-corpo" target="_blank" rel="noopener noreferrer" class="card-link">
   <div class="card-artigo">
     <p class="categoria">AUTOESTIMA</p>
-    <h3>Como se reconectar com seu corpo </h3>
+    <h3>Como se reconectar com seu corpo e alma  </h3>
     <a href="#">Leia mais</a>
     <p class="tempo-leitura">6 min. de leitura</p>
     <img src="img/veja-a-importancia-de-se-reconectar-consigo.jpg">
-
  </div>
+       </a>
+ 
+       <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </div>
 
-<!-- Artigo 9 -->
-<div class="card-artigo">
- <p class="categoria">ALIMENTAÇÃO</p>
- <h3>Alimentos que ajudam na TPM</h3>
- <a href="#">Leia mais</a>
- <p class="tempo-leitura">4 min. de leitura</p>
- <img src="img/vontade-de-comer-doce-na-tpm-1.jpg" alt="Alimentos TPM">
-</div>
+    <div class="footer-contact">
+      <h3><span class="barra"></span> CONTATO:</h3>
+      <p>Telefone: (16) 99333-999</p>
+      <p>WhatsApp: (16) 55552-6666</p>
+      <p>Email: atendimentoSerMulher@gmail.com</p>
+    </div>
 
+    <div class="footer-social">
+      <h3><span class="barra"></span> REDES SOCIAIS</h3>
+      <a href="#" class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i> Gostar
+      </a>
+      <a href="#" class="social-btn instagram">
+        <i class="fab fa-instagram"></i> Seguir
+      </a>
+  </div>
+</footer>
 
+<footer>
+  <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+</footer>
 </div>
 </section>
 </html>

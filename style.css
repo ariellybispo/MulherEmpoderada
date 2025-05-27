@@ -243,7 +243,6 @@ img {
     border-radius: 50px; 
 }
 
-/*Api de Maquiagens*/
 
 #produtos {
     display: flex;
@@ -292,7 +291,7 @@ img {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Efeito de sombra para dar destaque */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
 
   }
   
@@ -320,6 +319,12 @@ img {
     margin-bottom: 10px;
   }
   
+ a.card-link {
+  display: inline-block; 
+  text-decoration: none;
+  color: inherit;
+}
+
   .card-artigo h3 {
     font-size: 1.1em;
     margin-bottom: 10px;
@@ -347,3 +352,79 @@ img {
     max-width: 300px;
 }
 
+.footer {
+  background-color: #eff4f7;
+  border-top: 1px solid #eee;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-contact,
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact p,
+.footer-social a {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.barra {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background-color: #a1d7ec;
+  margin-right: 10px;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.social-btn i {
+  margin-right: 10px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: #8f3494;
+}

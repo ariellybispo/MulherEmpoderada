@@ -48,6 +48,5 @@ function verificarCadastro(event) {
     }
   }
   
-  // Configura o evento de envio do formulário de cadastro
   document.getElementById('formCadastro')?.addEventListener('submit', verificarCadastro);
   

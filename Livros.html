@@ -51,36 +51,45 @@
   </style>
 </head>
 <body>
+<script>
+  // Redireciona se o usuário não estiver logado
+  if (localStorage.getItem("usuarioLogado") !== "true") {
+    // Intercepta todos os cliques na página
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.addEventListener("click", function (e) {
+        e.preventDefault(); // Evita o clique normal
+        window.location.href = "login.html"; // Redireciona para login
+      }, true);
+    });
+  }
+</script>
+
 
   <h1>Livros Femininos</h1>
 
   <div class="livros-container">
-    <!-- Imagens dos livros -->
-    <div class="livro"><img src="livro_1.png" alt="Livro 1"></div>
-    <div class="livro"><img src="livro_2.png" alt="Livro 2"></div>
-    <div class="livro"><img src="livro_3.png" alt="Livro 3"></div>
-    <div class="livro"><img src="livro_4.png" alt="Livro 4"></div>
-    <div class="livro"><img src="livro_5.png" alt="Livro 5"></div>
-    <div class="livro"><img src="livro_6.png" alt="Livro 6"></div>
-    <div class="livro"><img src="livro_7.png" alt="Livro 7"></div>
-    <div class="livro"><img src="livro_8.png" alt="Livro 8"></div>
-    <div class="livro"><img src="livro_9.png" alt="Livro 9"></div>
-    <div class="livro"><img src="livro_10.png" alt="Livro 10"></div>
-    <div class="livro"><img src="livro_11.png" alt="Livro 11"></div>
-    <div class="livro"><img src="livro_12.png" alt="Livro 12"></div>
-    <div class="livro"><img src="livro_13.png" alt="Livro 13"></div>
-    <div class="livro"><img src="livro_14.png" alt="Livro 14"></div>
-    <div class="livro"><img src="livro_15.png" alt="Livro 15"></div>
-    <div class="livro"><img src="livro_16.png" alt="Livro 16"></div>
-    <div class="livro"><img src="livro_17.png" alt="Livro 17"></div>
-    <div class="livro"><img src="livro_18.png" alt="Livro 18"></div>
-    <div class="livro"><img src="livro_19.png" alt="Livro 19"></div>
-    <div class="livro"><img src="livro_20.png" alt="Livro 20"></div>
-    <div class="livro"><img src="livro_21.png" alt="Livro 21"></div>
-    <div class="livro"><img src="livro_22.png" alt="Livro 22"></div>
-    <div class="livro"><img src="livro_23.png" alt="Livro 23"></div>
-    <div class="livro"><img src="livro_24.png" alt="Livro 24"></div>
-    <div class="livro"><img src="livro_25.png" alt="Livro 25"></div>
+    <div class="livro"><img src="livros/Livro1.webp" alt="Livro 1"></div>
+    <div class="livro"><img src="livros/Livro2.jpg" alt="Livro 2"></div>
+    <div class="livro"><img src="livros/Livro3.jpg" alt="Livro 3"></div>
+    <div class="livro"><img src="livros/Livro4.jpg" alt="Livro 4"></div>
+    <div class="livro"><img src="livros/Livro5.webp" alt="Livro 5"></div>
+    <div class="livro"><img src="livros/Livro6.webp" alt="Livro 6"></div>
+    <div class="livro"><img src="livros/Livro7.webp" alt="Livro 7"></div>
+    <div class="livro"><img src="livros/Livro8.jpg" alt="Livro 8"></div>
+    <div class="livro"><img src="livros/Livro9.jpg" alt="Livro 9"></div>
+    <div class="livro"><img src="livros/Livro10.webp" alt="Livro 10"></div>
+    <div class="livro"><img src="livros/livros11.webp" alt="Livro 11"></div>
+    <div class="livro"><img src="livros/livro12.jpg" alt="Livro 12"></div>
+    <div class="livro"><img src="livros/livro13.webp" alt="Livro 13"></div>
+    <div class="livro"><img src="livros/livro14.webp" alt="Livro 14"></div>
+    <div class="livro"><img src="livros/livro15.webp" alt="Livro 15"></div>
+    <div class="livro"><img src="livros/livro16.jpg" alt="Livro 16"></div>
+    <div class="livro"><img src="livros/livro17.jpg" alt="Livro 17"></div>
+    <div class="livro"><img src="livros/livro18.jpg" alt="Livro 18"></div>
+    <div class="livro"><img src="livros/livro19.jpg" alt="Livro 19"></div>
+    <div class="livro"><img src="livros/livro20.jpg" alt="Livro 20"></div>
+    <div class="livro"><img src="livros/livro21.jpg" alt="Livro 21"></div>
+   
   </div>
 
 </body>

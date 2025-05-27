@@ -71,7 +71,6 @@
     text-decoration: none;
 }
  
-/* Aplica a imagem de fundo */
 body {
     margin: 0;
     padding: 0;
@@ -84,7 +83,6 @@ body {
     height: 100vh;
 }
 
-/* Container do formulário */
 #login-container {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 40px;
@@ -96,13 +94,11 @@ body {
     text-align: center;
 }
 
-/* Título */
 h1, h2 {
     color: #0c6a6d;
     margin-bottom: 20px;
 }
 
-/* Inputs */
 form input {
     width: 100%;
     padding: 12px;
@@ -114,7 +110,6 @@ form input {
     box-sizing: border-box;
 }
 
-/* Botão */
 form button {
     width: 100%;
     padding: 15px;
@@ -132,7 +127,6 @@ form button:hover {
     background-color: #5fae8a;
 }
 
-/* Links */
 a {
     color: #007bff;
     text-decoration: none;
@@ -143,14 +137,12 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Texto abaixo do formulário */
 p {
     margin-top: 20px;
     font-size: 14px;
     color: #333;
 }
 
-/* Erro */
 #error-message, #mensagemErro {
     color: red;
     font-size: 14px;

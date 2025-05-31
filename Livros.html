@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Livros Femininos</title>
   <style>
     body {
+       font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ace4f7);
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
+      padding: 40px 20px;
       color: #333;
     }
 
     h1 {
+    font-size: 42px;
+      color: #f7f9fb;
       text-align: center;
-      padding: 30px 0;
-      background-color: #ace4f7;
-      margin: 0;
-      font-size: 32px;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
     }
 
     .livros-container {
@@ -31,6 +31,7 @@
     }
 
     .livro {
+      position: relative;
       background-color: #fff;
       padding: 10px;
       border: 1px solid #ddd;
@@ -40,6 +41,8 @@
       align-items: center;
       justify-content: center;
       height: 230px;
+      cursor: pointer;
+      overflow: hidden;
     }
 
     .livro img {
@@ -47,50 +50,178 @@
       max-height: 100%;
       object-fit: contain;
       border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 26px;
+      color: #999;
+      user-select: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      z-index: 10;
+      background: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .favorite-btn.favorito {
+      color: #f22cd1;
+      text-shadow: 0 0 4px #f22cd1;
     }
   </style>
 </head>
 <body>
-<script>
-  // Redireciona se o usuário não estiver logado
-  if (localStorage.getItem("usuarioLogado") !== "true") {
-    // Intercepta todos os cliques na página
-    document.addEventListener("DOMContentLoaded", function () {
-      document.body.addEventListener("click", function (e) {
-        e.preventDefault(); // Evita o clique normal
-        window.location.href = "login.html"; // Redireciona para login
-      }, true);
-    });
-  }
-</script>
-
-
   <h1>Livros Femininos</h1>
 
   <div class="livros-container">
-    <div class="livro"><img src="livros/Livro1.webp" alt="Livro 1"></div>
-    <div class="livro"><img src="livros/Livro2.jpg" alt="Livro 2"></div>
-    <div class="livro"><img src="livros/Livro3.jpg" alt="Livro 3"></div>
-    <div class="livro"><img src="livros/Livro4.jpg" alt="Livro 4"></div>
-    <div class="livro"><img src="livros/Livro5.webp" alt="Livro 5"></div>
-    <div class="livro"><img src="livros/Livro6.webp" alt="Livro 6"></div>
-    <div class="livro"><img src="livros/Livro7.webp" alt="Livro 7"></div>
-    <div class="livro"><img src="livros/Livro8.jpg" alt="Livro 8"></div>
-    <div class="livro"><img src="livros/Livro9.jpg" alt="Livro 9"></div>
-    <div class="livro"><img src="livros/Livro10.webp" alt="Livro 10"></div>
-    <div class="livro"><img src="livros/livros11.webp" alt="Livro 11"></div>
-    <div class="livro"><img src="livros/livro12.jpg" alt="Livro 12"></div>
-    <div class="livro"><img src="livros/livro13.webp" alt="Livro 13"></div>
-    <div class="livro"><img src="livros/livro14.webp" alt="Livro 14"></div>
-    <div class="livro"><img src="livros/livro15.webp" alt="Livro 15"></div>
-    <div class="livro"><img src="livros/livro16.jpg" alt="Livro 16"></div>
-    <div class="livro"><img src="livros/livro17.jpg" alt="Livro 17"></div>
-    <div class="livro"><img src="livros/livro18.jpg" alt="Livro 18"></div>
-    <div class="livro"><img src="livros/livro19.jpg" alt="Livro 19"></div>
-    <div class="livro"><img src="livros/livro20.jpg" alt="Livro 20"></div>
-    <div class="livro"><img src="livros/livro21.jpg" alt="Livro 21"></div>
-   
-  </div>
+<div class="livro" data-id="livro1" data-src="livros/Livro1.webp" data-alt="Livro 1">
+  <img src="livros/Livro1.webp" alt="Livro 1" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
 
+<div class="livro" data-id="livro2" data-src="livros/Livro2.jpg" data-alt="Livro 2">
+  <img src="livros/Livro2.jpg" alt="Livro 2" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro3" data-src="livros/Livro3.jpg" data-alt="Livro 3">
+  <img src="livros/Livro3.jpg" alt="Livro 3" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro4" data-src="livros/Livro4.jpg" data-alt="Livro 4">
+  <img src="livros/Livro4.jpg" alt="Livro 4" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro5" data-src="livros/Livro5.webp" data-alt="Livro 5">
+  <img src="livros/Livro5.webp" alt="Livro 5" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro6" data-src="livros/Livro6.webp" data-alt="Livro 6">
+  <img src="livros/Livro6.webp" alt="Livro 6" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro7" data-src="livros/Livro7.webp" data-alt="Livro 7">
+  <img src="livros/Livro7.webp" alt="Livro 7" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro8" data-src="livros/Livro8.jpg" data-alt="Livro 8">
+  <img src="livros/Livro8.jpg" alt="Livro 8" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro9" data-src="livros/Livro9.jpg" data-alt="Livro 9">
+  <img src="livros/Livro9.jpg" alt="Livro 9" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro10" data-src="livros/Livro10.webp" data-alt="Livro 10">
+  <img src="livros/Livro10.webp" alt="Livro 10" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro11" data-src="livros/livros11.webp" data-alt="Livro 11">
+  <img src="livros/livros11.webp" alt="Livro 11" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro12" data-src="livros/livro12.jpg" data-alt="Livro 12">
+  <img src="livros/livro12.jpg" alt="Livro 12" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro13" data-src="livros/livro13.webp" data-alt="Livro 13">
+  <img src="livros/livro13.webp" alt="Livro 13" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro14" data-src="livros/livro14.webp" data-alt="Livro 14">
+  <img src="livros/livro14.webp" alt="Livro 14" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro15" data-src="livros/livro15.webp" data-alt="Livro 15">
+  <img src="livros/livro15.webp" alt="Livro 15" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro16" data-src="livros/livro16.jpg" data-alt="Livro 16">
+  <img src="livros/livro16.jpg" alt="Livro 16" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro17" data-src="livros/livro17.jpg" data-alt="Livro 17">
+  <img src="livros/livro17.jpg" alt="Livro 17" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro18" data-src="livros/livro18.jpg" data-alt="Livro 18">
+  <img src="livros/livro18.jpg" alt="Livro 18" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro19" data-src="livros/livro19.jpg" data-alt="Livro 19">
+  <img src="livros/livro19.jpg" alt="Livro 19" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro20" data-src="livros/livro20.jpg" data-alt="Livro 20">
+  <img src="livros/livro20.jpg" alt="Livro 20" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+<div class="livro" data-id="livro21" data-src="livros/livro21.jpg" data-alt="Livro 21">
+  <img src="livros/livro21.jpg" alt="Livro 21" />
+  <div class="favorite-btn" title="Favoritar">🤍</div>
+</div>
+
+  <script>
+  const livros = document.querySelectorAll('.livro');
+
+  let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+  function atualizarUI() {
+    livros.forEach(livro => {
+      const id = livro.dataset.id;
+      const btn = livro.querySelector('.favorite-btn');
+
+      if (favoritos.includes(id)) {
+        btn.textContent = '❤️';  
+        btn.classList.add('favorited');
+      } else {
+        btn.textContent = '🤍'; 
+        btn.classList.remove('favorited');
+      }
+    });
+  }
+
+  livros.forEach(livro => {
+    const btn = livro.querySelector('.favorite-btn');
+    btn.addEventListener('click', () => {
+      const id = livro.dataset.id;
+      if (favoritos.includes(id)) {
+        favoritos = favoritos.filter(favId => favId !== id);
+      } else {
+        favoritos.push(id);
+      }
+      localStorage.setItem('favoritos', JSON.stringify(favoritos));
+      atualizarUI();
+    });
+  });
+
+  atualizarUI();
+</script>
 </body>
 </html>

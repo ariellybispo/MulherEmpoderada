@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meus Favoritos ❤️</title>
+  <style>
+    body {
+       font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ace4f7);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+    font-size: 42px;
+      color: #f7f9fb;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
+    }
+
+    .favoritos-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .favorito-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .favorito-item img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .favorito-item a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .favorito-item a:hover {
+      text-decoration: underline;
+    }
+
+    .categoria {
+      font-size: 12px;
+      color: #d23b93;
+      margin-bottom: 4px;
+    }
+
+    p, h3, h2 {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meus Favoritos ❤️</h1>
+  <div class="favoritos-container" id="favoritos"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("favoritos");
+      const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+      if (favoritos.length === 0) {
+        container.innerHTML = "<p style='text-align:center;'>Nenhum item favoritado ainda.</p>";
+        return;
+      }
+
+      favoritos.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "favorito-item";
+        div.innerHTML = item.html;
+
+        const btn = div.querySelector(".favorite-btn");
+        if (btn) {
+          btn.textContent = "🗑️";
+          btn.addEventListener("click", () => {
+            const index = favoritos.findIndex(f => f.id === item.id);
+            if (index !== -1) {
+              favoritos.splice(index, 1);
+              localStorage.setItem("favoritos", JSON.stringify(favoritos));
+              div.remove();
+              if (favoritos.length === 0) {
+                container.innerHTML = "<p style='text-align:center;'>Nenhum item favoritado ainda.</p>";
+              }
+            }
+          });
+        }
+
+        container.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>

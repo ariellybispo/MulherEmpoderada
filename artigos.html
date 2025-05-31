@@ -11,17 +11,20 @@
       padding: 40px 20px;
       color: #333;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
     }
+
     h1 {
       font-size: 42px;
       color: #f7f9fb;
       text-align: center;
       margin-bottom: 50px;
-     text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
+      text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
     }
+
     .artigo {
       background-color: #fff;
       border-left: 6px solid #f22cd1;
@@ -29,21 +32,34 @@
       padding: 20px;
       border-radius: 6px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: relative;
     }
+
+    .favorite-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
     .artigo h2 {
       margin: 0;
       font-size: 22px;
       color: #4a2e38;
     }
+
     .artigo p {
       margin: 8px 0 0;
       line-height: 1.6;
       font-size: 16px;
     }
+
     .artigo a {
       text-decoration: none;
       color: #0073aa;
     }
+
     .artigo a:hover {
       text-decoration: underline;
     }
@@ -53,58 +69,99 @@
 
   <div class="container">
     <h1>Leituras que Inspiram</h1>
+  
+    <div class="artigo" data-id="1">
+  <span class="favorite-btn">🤍</span>
+  <h2><a href="https://www.geledes.org.br/" target="_blank">Feminismo Negro</a></h2>
+  <p>Uma análise sobre mulheres negras na luta por igualdade.</p>
+</div>
 
-    <div class="artigo">
-      <h2><a href="https://www.geledes.org.br/" target="_blank">Feminismo Negro no Brasil</a></h2>
-      <p>Uma análise do papel das mulheres negras na luta por igualdade e direitos civis. Publicado no Geledés – Instituto da Mulher Negra.</p>
-    </div>
-
-    <div class="artigo">
-      <h2><a href="https://revistamarieclaire.globo.com/" target="_blank">Mulheres e Carreira: desafios no mercado de trabalho</a></h2>
+    <div class="artigo" data-id="2">
+      <span class="favorite-btn">🤍</span>
+      <h2><a href="https://revistamarieclaire.globo.com/" target="_blank">Mulheres e Carreira</a></h2>
       <p>Reportagem especial da Marie Claire sobre desigualdade salarial e liderança feminina.</p>
     </div>
 
-    <div class="artigo">
-      <h2><a href="https://blogueirasfeministas.com/" target="_blank">O papel da mídia na construção de estereótipos femininos</a></h2>
+    <div class="artigo" data-id="3">
+      <span class="favorite-btn">🤍</span>
+      <h2><a href="https://blogueirasfeministas.com/" target="_blank">O papel da mídia</a></h2>
       <p>Discussão crítica sobre como a mídia molda padrões para a mulher moderna.</p>
     </div>
 
-    <div class="artigo">
+    <div class="artigo" data-id="4">
+      <span class="favorite-btn">🤍</span>
       <h2><a href="https://www.psyson.com.br/artigos/autocuidado-e-feminismo/" target="_blank">Autocuidado como Ato Político</a></h2>
       <p>Relacionando o autocuidado com saúde mental e resistência feminina.</p>
     </div>
 
-    <div class="artigo">
+    <div class="artigo" data-id="5">
+      <span class="favorite-btn">🤍</span>
       <h2><a href="https://azmina.com.br/" target="_blank">Maternidade Real</a></h2>
       <p>A desconstrução da romantização da maternidade e os impactos na vida da mulher.</p>
     </div>
 
-    <div class="artigo">
+    <div class="artigo" data-id="6">
+      <span class="favorite-btn">🤍</span>
       <h2><a href="https://mulher.jundiai.sp.gov.br/cuidados-com-a-mulher/" target="_blank">Cuidados com a mulher</a></h2>
       <p>Após 1960, se intensificaram as ações sobre a saúde da mulher</p>
     </div>
 
-    <div class="artigo">
+    <div class="artigo" data-id="7">
+      <span class="favorite-btn">🤍</span>
       <h2><a href="https://www.sof.org.br/category/artigos/" target="_blank">Mulheres estão em luta</a></h2>
-      <p>Maria Fernanda Marcelino, publicado originalmente no Brasil de Fato A desigualdade no mundo do trabalho escancara uma das maiores contradições do nosso tempo</p>
-    </div>
-    
-    <div class="artigo">
-      <h2><a href="https://www.scielo.br/j/csc/a/SxDFyB4bPnxQGpJBnq93Lhn" target="_blank">Feminicídios: conceitos, tipos e cenários</a></h2>
-      <p>Este texto é um ensaio teórico que discute os conceitos, os tipos e os cenários de feminicídios e apresenta algumas propostas para a prevenção destas mortes prematuras, injustas e evitáveis.</p>
+      <p>A desigualdade no mundo do trabalho escancara uma das maiores contradições do nosso tempo</p>
     </div>
 
-    <div class="artigo">
+    <div class="artigo" data-id="8">
+      <span class="favorite-btn">🤍</span>
+      <h2><a href="https://www.scielo.br/j/csc/a/SxDFyB4bPnxQGpJBnq93Lhn" target="_blank">Feminicídios</a></h2>
+      <p>Discussão teórica sobre conceitos e cenários de feminicídios no Brasil.</p>
+    </div>
+
+    <div class="artigo" data-id="9">
+      <span class="favorite-btn">🤍</span>
       <h2><a href="https://mulher.jundiai.sp.gov.br/cuidados-com-a-mulher/" target="_blank">Feminismo, história e poder</a></h2>
-      <p>Este artigo está dividido em duas partes, cada uma com objetivos distintos e específicos: na primeira parte, farei uma reconstrução, em termos muito gerais, da história do feminismo</p>
+      <p>Reconstrução da história do feminismo em duas fases distintas.</p>
     </div>
 
-<div class="artigo">
-      <h2><a href="https://www.scielo.br/j/csc/a/SxDFyB4bPnxQGpJBnq93Lhn" target="_blank">AS QUATRO ONDAS DO FEMINISMO: LUTAS E CONQUISTAS</a></h2>
-      <p>O presente artigo discute as quatros ondas importantes do feminismo, buscando demonstrar toda a trajetória, lutas, desafios e conquistas sob o aspecto do Direito Internacional dos Direitos Humanos. </p>
+    <div class="artigo" data-id="10">
+      <span class="favorite-btn">🤍</span>
+      <h2><a href="https://www.scielo.br/j/csc/a/SxDFyB4bPnxQGpJBnq93Lhn" target="_blank">As Quatro Ondas do Feminismo</a></h2>
+      <p>Discussão sobre as quatro ondas do feminismo sob a ótica do Direito Internacional dos Direitos Humanos.</p>
     </div>
+  </div>
 
-</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+      document.querySelectorAll(".favorite-btn").forEach((btn) => {
+        const card = btn.closest(".artigo");
+        const id = card.dataset.id;
+        const artigoHTML = card.outerHTML;
+
+        if (favoritos.find(f => f.id === id)) {
+          btn.textContent = "❤️";
+        }
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const index = favoritos.findIndex(f => f.id === id);
+
+          if (index === -1) {
+            favoritos.push({ id, html: artigoHTML });
+            btn.textContent = "❤️";
+          } else {
+            favoritos.splice(index, 1);
+            btn.textContent = "🤍";
+          }
+
+          localStorage.setItem("favoritos", JSON.stringify(favoritos));
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
-

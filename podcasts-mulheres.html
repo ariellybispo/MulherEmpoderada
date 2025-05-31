@@ -11,66 +11,132 @@
       margin: auto;
       background: linear-gradient(to bottom, #ace4f7);
     }
+
     h1 {
-        color: white;
-     text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
+      color: white;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
+      margin-bottom: 40px;
     }
+
     .podcast {
+      position: relative;
       margin-bottom: 30px;
       padding: 15px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
+
     .podcast a {
       color: #0073aa;
       text-decoration: none;
       font-weight: bold;
     }
+
     .podcast a:hover {
       text-decoration: underline;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .ver-fav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .ver-fav a {
+      font-size: 18px;
+      color: #fff;
+      background: #f22cd1;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <h1>Podcasts Apresentados por Mulheres</h1>
-
-  <div class="podcast">
+  <div class="podcast" data-id="p1">
+    <span class="favorite-btn">🤍</span>
     <h2><a href="https://open.spotify.com/show/5AzkxpQZNjw17GA1GXt0Zz" target="_blank">1. Rita Lee: Outra Autobiografia - O Podcast</a></h2>
     <p>Uma história em cinco episódios sobre a vida de Rita Lee, apresentado por Astrid Fontenelle e Guilherme Samora.</p>
   </div>
 
-  <div class="podcast">
+  <div class="podcast" data-id="p2">
+    <span class="favorite-btn">🤍</span>
     <h2><a href="https://open.spotify.com/episode/2cdbVD9PQtEZThRXG0wk6r" target="_blank">2. Calcinha Larga</a></h2>
     <p>Com Camila Fremder, Helen Ramos e Tati Bernardi — bate-papo sobre a vida real da mulher moderna.</p>
   </div>
 
-  <div class="podcast">
+  <div class="podcast" data-id="p3">
+    <span class="favorite-btn">🤍</span>
     <h2><a href="https://open.spotify.com/show/1592iJQt0IlC5u5lKXrbyS" target="_blank">3. Bom dia, Obvious</a></h2>
     <p>Com Marcela Ceribelli, aborda temas como carreira, saúde mental e autoestima.</p>
   </div>
 
-  <div class="podcast">
-    <h2><a href="https://open.spotify.com/show/3abnr07SkMuHOUOXQpGnf1 " target="_blank">4. É noia minha?</a></h2>
-    <p> Camila Fremder, esse podcast divertido, levanta discussões sobre os pensamentos mais malucos que passam pela mente humana.</p>
+  <div class="podcast" data-id="p4">
+    <span class="favorite-btn">🤍</span>
+    <h2><a href="https://open.spotify.com/show/3abnr07SkMuHOUOXQpGnf1" target="_blank">4. É noia minha?</a></h2>
+    <p>Camila Fremder levanta discussões sobre os pensamentos mais malucos que passam pela mente humana.</p>
   </div>
 
-  <div class="podcast">
+  <div class="podcast" data-id="p5">
+    <span class="favorite-btn">🤍</span>
     <h2><a href="https://open.spotify.com/show/66XCLKbi33MubYTZX2G2jW" target="_blank">5. Não Inviabilize</a></h2>
     <p>Deia narra histórias reais com humor e emoção, divididas em quadros como Amor nas Redes e Picolé de Limão.</p>
   </div>
 
-  <div class="podcast">
-    <h2><a href="https://open.spotify.com/show/4Rc0ZXgYLd0NZucIKYjurg " target="_blank">6. PodDelas</a></h2>
-    <p>Tata Estaniecki e Bruna Unzueta, o “PodDelas” traz bate-papos divertidos com convidados ilustres.</p>
-  </div>
- 
-  <div class="podcast">
-    <h2><a href="https://open.spotify.com/show/3l28wC5LyiiW2EdxgKW1cE" target="_blank">7. Autoconsciente</a></h2>
-    <p>coach Regina Gianetti especialista em Atenção Plena, auxilia os ouvintes no processo do autoconhecimento</p>
+  <div class="podcast" data-id="p6">
+    <span class="favorite-btn">🤍</span>
+    <h2><a href="https://open.spotify.com/show/4Rc0ZXgYLd0NZucIKYjurg" target="_blank">6. PodDelas</a></h2>
+    <p>Tata Estaniecki e Bruna Unzueta trazem bate-papos divertidos com convidados ilustres.</p>
   </div>
 
+  <div class="podcast" data-id="p7">
+    <span class="favorite-btn">🤍</span>
+    <h2><a href="https://open.spotify.com/show/3l28wC5LyiiW2EdxgKW1cE" target="_blank">7. Autoconsciente</a></h2>
+    <p>Regina Gianetti, especialista em Atenção Plena, auxilia os ouvintes no processo do autoconhecimento.</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+      document.querySelectorAll(".favorite-btn").forEach((btn) => {
+        const card = btn.closest(".podcast");
+        const id = card.dataset.id;
+        const podcastHTML = card.outerHTML;
+
+        if (favoritos.find(f => f.id === id)) {
+          btn.textContent = "❤️";
+        }
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const index = favoritos.findIndex(f => f.id === id);
+
+          if (index === -1) {
+            favoritos.push({ id, html: podcastHTML });
+            btn.textContent = "❤️";
+          } else {
+            favoritos.splice(index, 1);
+            btn.textContent = "🤍";
+          }
+
+          localStorage.setItem("favoritos", JSON.stringify(favoritos));
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

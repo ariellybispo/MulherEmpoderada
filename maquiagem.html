@@ -1,19 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos de Maquiagem</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <title>Maquiagens - Estilo Grid</title>
+  <style>
+    body {
+       font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ace4f7);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+     font-size: 42px;
+      color: #f7f9fb;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 4px rgba(58, 52, 52, 0.6);
+    }
+
+    #produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .produto {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(214, 51, 108, 0.3);
+    }
+
+    .produto img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .produto h3 {
+      font-size: 16px;
+      margin: 0 0 8px 0;
+      text-align: center;
+      color: #14bddb;
+    }
+
+    .produto p {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+      margin: 0 0 10px 0;
+      flex-grow: 1;
+    }
+
+    .produto .price {
+      font-weight: bold;
+      color: #14bddb;
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Produtos de Maquiagem</h1>
-    </header>
+  <h1>Produtos de Maquiagem - Maybelline</h1>
+  <div id="produtos">Carregando produtos...</div>
 
-    <main id="produtos">
-    </main>
-
-    <script src="maquiagem.js"></script>
+  <script>
+    fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('produtos');
+        container.innerHTML = ''; 
+        data.forEach(produto => {
+          const div = document.createElement('div');
+          div.classList.add('produto');
+          div.innerHTML = `
+            <img src="${produto.image_link}" alt="${produto.name}" />
+            <h3>${produto.name}</h3>
+            <p>${produto.description ? produto.description.substring(0, 60) + '...' : 'Sem descrição'}</p>
+            <div class="price">$${produto.price}</div>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById('produtos').textContent = 'Erro ao carregar os produtos.';
+        console.error(err);
+      });
+  </script>
 </body>
 </html>

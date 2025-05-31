@@ -353,8 +353,8 @@ img {
 }
 
 .footer {
-  background-color: #eff4f7;
-  border-top: 1px solid #eee;
+  background-color: #b3dced;
+  border-top: 1px solid #b3dced;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   color: #333;
@@ -427,4 +427,15 @@ img {
 
 .instagram {
   background-color: #8f3494;
+}
+.favorite-btn {
+  font-size: 2.5rem;  
+  cursor: pointer;   
+  user-select: none; 
+  color: #bbb;   
+  transition: color 0.3s ease;
+}
+
+.favorite-btn.favorito {
+  color: red;   
 }

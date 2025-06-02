@@ -31,7 +31,7 @@ function verificarCadastro(event) {
     localStorage.setItem("senhaCadastrada", senha);
   
     alert("Cadastro completo!");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
   
   function verificarLogin() {
@@ -42,7 +42,7 @@ function verificarCadastro(event) {
     const senhaSalva = localStorage.getItem("senhaCadastrada");
   
     if (email === emailSalvo && senha === senhaSalva) {
-      window.location.href = "index.html";
+      window.location.href = "home.html";
     } else {
       alert("Email ou senha inválidos.");
     }

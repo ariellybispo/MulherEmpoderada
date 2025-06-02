@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página inicial</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<script src="favoritos.js"></script>
+
+<body>
+  <div id="top-bar">
+    <a href="index.html" id="login-btn" class="login-link">Login</a>
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Buscar..." />
+    </div>
+  </div>
+
+  <div id="login-container" style="display: none;">
+    <form id="login-form" action="#" method="post">
+      <h2>Login</h2>
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required /><br /><br />
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required /><br /><br />
+      <button type="submit">Entrar</button>
+      <button type="button" id="close-login">Fechar</button>
+    </form>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="podcasts-mulheres.html">Podcast</a></li>
+      <li><a href="artigos.html">Artigos</a></li>
+      <li><a href="favoritos.html">favoritos</a></li>
+      <li><a href="Livros.html">Livros</a></li>
+      <li>
+        <a href="#" id="moda">Moda</a>
+        <ul id="sub-opcoes" style="display: none;">
+      <li><a href="maquiagem.html">Maquiagens</a></li>
+      <li><a href="calcados.html">Calçados</a></li>
+      <li><a href="roupas.html">Roupas</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="destaque">
+    <div class="texto">
+      <h1>AQUI VOCÊ<br />ENCONTRA A SUA<br />MELHOR VERSÃO !!</h1>
+    </div>
+    <img src="img/cuidados_mulher_header-1.jpg" alt="ser mulher" />
+  </section>
+
+  <section id="artigos">
+    <div class="artigos-header">
+      <h2>Diquinhas femininas</h2>
+    </div>
+    <div class="artigos-container">
+        
+      <div class="card-artigo">
+       <span class="favorite-btn">🤍</span>
+        <a href="https://www.alwaysbrasil.com.br/pt-br/para-mulheres/saude/exercicios-para-a-menstruacao" target="_blank" rel="noopener noreferrer" class="card-link">
+          <p class="categoria">EXERCÍCIOS</p>
+          <h3>Exercícios leves para o período menstrual</h3>
+          <p class="tempo-leitura">3 min. de leitura</p>
+          <img src="img/como-aliviar-o-inchaco-menstrual-3.jpg" alt="Exercícios durante o ciclo" />
+        </div>
+      </a>
+
+   <div class="card-artigo" data-id="artigo-1">
+  <span class="favorite-btn">🤍</span>
+  <a href="https://...https://www.maristelacorralero.com.br/" target="_blank" rel="noopener noreferrer" class="card-link">
+    <p class="categoria">BEM-ESTAR</p>
+    <h3>Dicas para fortalecer sua autoestima e Bem-Estar</h3>
+    <p class="tempo-leitura">5 min. de leitura</p>
+    <img src="img/conceito-de-ilustracao-de-auto-cuidado_23-2148526939.avif" alt="Autoestima" />
+  </a>
+</div>
+
+      <a href="https://www.tuasaude.com/6-dicas-para-diminuir-as-colicas-menstruais/" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-artigo">
+           <span class="favorite-btn">🤍</span>
+          <p class="categoria">SAÚDE FEMININA</p>
+          <h3>Como lidar com as cólicas menstruais no dia a dia</h3>
+          <p class="tempo-leitura">3 min. de leitura</p>
+          <img src="img/desenho-animado-de-uma-mulher-com-colicas-menstruais_207579-3121.avif" alt="Cólica" />
+        </div>
+      </a>
+
+      <a href="https://www.tuasaude.com/alimentos-que-combatem-a-tpm-tensao-pre-menstrual/" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-artigo">
+           <span class="favorite-btn">🤍</span>
+          <p class="categoria">ALIMENTAÇÃO</p>
+          <h3>Dieta para TPM: melhores alimentos e o que evitar</h3>
+          <p class="tempo-leitura">4 min. de leitura</p>
+          <img src="img/vontade-de-comer-doce-na-tpm-1.jpg" alt="Alimentos TPM" />
+        </div>
+      </a>
+
+        <a href="https://iplclinicaescola.com.br/2021/06/16/mulheres-sexo-e-tabu-porque-a-sexualidade-feminina-ainda-e-reprimida/" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-artigo">
+        <span class="favorite-btn">🤍</span>
+          <p class="categoria">SEXUALIDADE</p>
+          <h3>Desejo feminino: não é tabu — é humano</h3>
+          <p class="tempo-leitura">8 min. de leitura</p>
+          <img src="img/ilustracao-de-educacao-sexual-desenhada-a-mao_23-2150006291.avif" alt="Sexualidade" />
+        </div>
+      </a>
+
+      <a href="https://istoe.com.br/consciencia-corporal-como-ter-uma-conexao-mais-profunda-com-seu-corpo" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-artigo">
+         <span class="favorite-btn">🤍</span>
+          <p class="categoria">AUTOESTIMA</p>
+          <h3>Como se reconectar com seu corpo e alma</h3>
+          <p class="tempo-leitura">6 min. de leitura</p>
+          <img src="img/veja-a-importancia-de-se-reconectar-consigo.jpg" alt="Reconexão com o corpo" />
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo"></div>
+
+      <div class="footer-contact">
+        <h3><span class="barra"></span> CONTATO:</h3>
+        <p>Telefone: (16) 99333-999</p>
+        <p>WhatsApp: (16) 55552-6666</p>
+        <p>Email: atendimentoMulherE@gmail.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h3><span class="barra"></span> REDES SOCIAIS</h3>
+        <a href="#" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i> Gostar
+        </a>
+        <a href="#" class="social-btn instagram">
+          <i class="fab fa-instagram"></i> Seguir
+        </a>
+      </div>
+    </div>
+
+    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("search-input");
+      const artigos = document.querySelectorAll(".card-artigo");
+
+      input.addEventListener("input", function () {
+        const termo = input.value.toLowerCase();
+
+        artigos.forEach((artigo) => {
+          const texto = artigo.innerText.toLowerCase();
+          artigo.style.display = texto.includes(termo) ? "block" : "none";
+      
+        });
+      });
+    });
+    
+
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

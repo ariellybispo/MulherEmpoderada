@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener('click', (event) => {
     if (!estaLogado()) {
-window.location.href = '/pasta/login.html';
+window.location.href = 'index.html';
     }
   });
 

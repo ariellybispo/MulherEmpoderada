@@ -46,15 +46,4 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Erro ao buscar maquiagens:", error);
       });
   }
-
-  function estaLogado() {
-    return localStorage.getItem('usuarioLogado') === 'true';
-  }
-
-  document.addEventListener('click', (event) => {
-    if (!estaLogado()) {
-window.location.href = 'index.html';
-    }
-  });
-
 });
